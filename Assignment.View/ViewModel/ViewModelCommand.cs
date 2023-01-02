@@ -13,6 +13,10 @@ namespace Assignment.View.ViewModel
         private readonly Action<Object> _executeAction;
         private readonly Predicate<Object> _canExecuteAction;
 
+        public ViewModelCommand()
+        {
+        }
+
         //Constructors
         public ViewModelCommand(Action<object> executeAction)
         {
