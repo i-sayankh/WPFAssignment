@@ -180,8 +180,9 @@
                                Foreground="#EB455F"
                                FontSize="16"
                                FontWeight="Medium"
-                               FontFamily="Monsterrat"                               
-                               Margin="0, 35, 0, 0"/>
+                               FontFamily="Montserrat"                               
+                               Margin="0, 35, 0, 0"
+                               TextWrapping="Wrap"/>
 
                     <Button x:Name="btnLogin"
                             Command="{Binding LoginCommand}"
@@ -192,7 +193,7 @@
                             FontFamily="Monsterrat"
                             Cursor="Hand"
                             Grid.Column="2"
-                            Margin="0, 40, 0, 0">
+                            Margin="0, 40, 0, 0" Click="btnLogin_Click_1">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -227,7 +228,7 @@
                                FontWeight="Medium"
                                FontFamily="Monsterrat"/>
 
-                        <TextBlock Text="Reset Password"
+                        <TextBlock Text="Register"
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Medium"

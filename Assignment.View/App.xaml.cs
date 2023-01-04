@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Assignment.View.View;
+using Assignment.View.ViewModel;
 
 namespace Assignment.View
 {
@@ -14,16 +15,16 @@ namespace Assignment.View
     /// </summary>
     public partial class App : Application
     {
-        protected void Application_Startup(object sender, StartupEventArgs e)
+        protected void ApplicationStart(object sender, StartupEventArgs e)
         {
             var loginView = new LoginView();
             loginView.Show();
             loginView.IsVisibleChanged += (s, ev) =>
             {
-                if (loginView.IsVisible == false && loginView.IsLoaded)
+                if(loginView.IsVisible==false && loginView.IsLoaded)
                 {
-                    var mainView = new MainWindow();
-                    mainView.Show();
+                    var mainwindow = new MainWindow();
+                    mainwindow.Show();
                     loginView.Close();
                 }
             };

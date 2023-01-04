@@ -13,10 +13,6 @@ namespace Assignment.View.ViewModel
         private readonly Action<Object> _executeAction;
         private readonly Predicate<Object> _canExecuteAction;
 
-        public ViewModelCommand()
-        {
-        }
-
         //Constructors
         public ViewModelCommand(Action<object> executeAction)
         {
@@ -33,7 +29,7 @@ namespace Assignment.View.ViewModel
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
         }
 
         //Methods

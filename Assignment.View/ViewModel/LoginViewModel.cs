@@ -9,6 +9,7 @@ using System.Windows.Input;
 using Assignment.View.Repositories;
 using System.Threading;
 using System.Security.Principal;
+using System.Net;
 
 namespace Assignment.View.ViewModel
 {
@@ -78,7 +79,7 @@ namespace Assignment.View.ViewModel
         {
             bool validData;
             if(string.IsNullOrWhiteSpace(UserName) || UserName.Length < 3 ||
-                Password== null || Password.Length < 3)
+                Password == null || Password.Length < 3)
                 validData= false;
             else 
                 validData= true;
@@ -87,7 +88,7 @@ namespace Assignment.View.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-            var isValidUser = userRepository.AuthenticateUser(new System.Net.NetworkCredential(UserName, Password));
+            var isValidUser = userRepository.AuthenticateUser(new NetworkCredential(UserName, Password));
             if (isValidUser)
             {
                 Thread.CurrentPrincipal = new GenericPrincipal(

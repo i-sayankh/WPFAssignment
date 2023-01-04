@@ -12,7 +12,7 @@ namespace Assignment.View.Repositories
         private readonly string _connectonString;
         public RepositoryBase()
         {
-            _connectonString= "Server=(SAYANKHUTIA); Database=Assignment; Integrated Security=true";
+            _connectonString= "Data Source=SAYANKHUTIA;Initial Catalog=Assignment;Integrated Security=True";
         }
         protected SqlConnection GetConnection()
         {
