@@ -18,7 +18,7 @@
             BorderThickness="5">
 
             <StackPanel Orientation="Vertical"
-                    Margin="176,62,182,38">
+                    Margin="176,75,188,38">
 
                 <Label Content="Label"
                        FontSize="25"
@@ -26,14 +26,17 @@
                        Margin="0, 0, 0, 5"
                        Foreground="White"/>
 
-                <TextBlock Text="Binding CurrentUserAccount.DisplayName}"
+                <TextBlock Text="{Binding CurrentUserAccount.DisplayName}"
                            FontSize="20"
                            Foreground="White"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"/>
-                
-                
-               
+                <Button x:Name="btnLogout"
+                        Content="Log Out" 
+                        Height="34" 
+                        Width="110"
+                        Margin="30"
+                        RenderTransformOrigin="0.667,4.96"/>
             </StackPanel>
 
         </Border>
